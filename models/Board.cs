@@ -31,16 +31,16 @@ public class Board
                 // Robot occupies the cell
                 if (robot.IsPlaced && robot.Y == x && robot.X == y)
                 {
-                    Console.Write("[ R ]");
+                    Console.Write("[R]");
                 }
                 else
                 {
-                    Console.Write($"[ X ]");
+                    Console.Write($"[ ]");
                 }
             }
             Console.WriteLine();
         }
-        Console.WriteLine("===========");
+        Console.WriteLine("===============");
         Console.WriteLine();
     }
 }

@@ -24,18 +24,18 @@ public class Board
     public void Draw(Robot robot)
     {
         Console.WriteLine();
-        for (int row = Cells.GetLength(0) - 1; row >= 0; row--)
+        for (int x = Cells.GetLength(0) - 1; x >= 0; x--)
         {
-            for (int col = 0; col < Cells.GetLength(1); col++)
+            for (int y = 0; y < Cells.GetLength(1); y++)
             {
                 // Robot occupies the cell
-                if (robot.IsPlaced && robot.Y == row && robot.X == col)
+                if (robot.IsPlaced && robot.Y == x && robot.X == y)
                 {
-                    Console.Write("R");
+                    Console.Write("[ R ]");
                 }
                 else
                 {
-                    Console.Write($"X");
+                    Console.Write($"[ X ]");
                 }
             }
             Console.WriteLine();

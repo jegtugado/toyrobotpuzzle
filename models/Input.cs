@@ -32,16 +32,14 @@ public class Input
                 try
                 {
                     command = commandFactory.GetCommand(commandName);
-                    if (command != null && split.Length == 2)
-                    {
-                        command.Set(split[1]);
-                    }
+                    invalid = command == null;
+                    var parameters = split.Length == 2 ? split[1] : null;
+                    command?.Set(parameters);
                 }
                 catch
                 {
                     invalid = true;
                 }
-
             }
         }
 

@@ -2,9 +2,12 @@ public class Left : ICommand
 {
     public string Name => "LEFT";
 
-    public void Set(object parameters)
+    public void Set(object? parameters)
     {
-
+        if (parameters != null)
+        {
+            throw new ArgumentException("Invalid value.", nameof(parameters));
+        }
     }
 
     public void Execute(Board board, Robot robot)

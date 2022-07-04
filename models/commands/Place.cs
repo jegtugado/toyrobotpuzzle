@@ -5,7 +5,7 @@ public class Place : ICommand
     public int Y { get; private set; }
     public Direction Direction { get; private set; }
 
-    public void Set(object parameters)
+    public void Set(object? parameters)
     {
         // Expected format x,y,direction
         var split = (parameters as string)?.Split(',');
